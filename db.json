@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "id": 6,
+      "name": "all",
+      "label": "All"
+    },
+      {
+          "id": 1,
+          "name": "man",
+          "label": "Man"
+      },
+      {
+          "id": 2,
+          "name": "women",
+          "label": "Women"
+      },
+      {
+          "id": 3,
+          "name": "kids",
+          "label": "Kids"
+      },
+      {
+          "id": 4,
+          "name": "accessories",
+          "label": "Accessories"
+      },
+      {
+          "id": 5,
+          "name": "essential",
+          "label": "Essential"
+      }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "title": "Women Hot Collection",
+      "price": 29,
+      "img": "https://wpthemesgrid.com/themes/free/eshop/images/products/p4.jpg",
+      "filter": "women"
+    },
+    {
+      "id": 2,
+      "title": "Awesome Bags Collection",
+      "price": 29,
+      "img": "https://wpthemesgrid.com/themes/free/eshop/images/products/p6.jpg",
+      "filter": "women"
+    },
+    {
+      "id": 3,
+      "title": "Women Pant Collectons",
+      "price": 50,
+      "img": "https://wpthemesgrid.com/themes/free/eshop/images/products/p8.jpg",
+      "filter": "man"
+    }
+  ]
+}

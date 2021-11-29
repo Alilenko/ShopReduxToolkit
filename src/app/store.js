@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import categories from '../components/navProduct/NavProductSlice';
+import goods from '../components/productItem/ProductItemSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    categories,
+    goods
   },
+  devTools: process.env.NODE_ENV !== 'production'
 });
