@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
 import Header  from './components/Header/Header';
-import ProductList from './components/productList/ProductList';
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
   Switch
 } from "react-router-dom";
 

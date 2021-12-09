@@ -1,7 +1,7 @@
 import React from 'react'
 import NavProduct from '../navProduct/NavProduct';
 import ProductItem from '../productItem/ProductItem';
-import {Route, Routes} from 'react-router-dom'
+
 import './productList.css'
 
 const ProductList = () => {

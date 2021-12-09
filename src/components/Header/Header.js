@@ -40,12 +40,7 @@ const Header = () => {
 					</div>
 					<div className="col-lg-2 col-md-3 col-12">
 						<div className="right-bar">
-							<div className="sinlge-bar">
-								<a href="#" className="single-icon"><i className="fa fa-heart-o" aria-hidden="true"></i></a>
-							</div>
-							<div className="sinlge-bar">
-								<a href="#" className="single-icon"><i className="fa fa-user-circle-o" aria-hidden="true"></i></a>
-							</div>
+
 							<div className="sinlge-bar shopping">
 								<Link to='/card' className="single-icon"><i className="ti-bag"></i> <span className="total-count">{qtty}</span></Link>
 

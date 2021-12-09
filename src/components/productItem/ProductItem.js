@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHttp } from '../../hooks/http.hook';
-import {goodsFetched, goodsError, addToBasket, changeQtty, changeTotalPrice} from '../productItem/ProductItemSlice';
+import {goodsFetched, goodsError, addToBasket, changeQtty} from '../productItem/ProductItemSlice';
 import { createSelector} from 'reselect'
 
 
 const ProductItem = () => {
-    const {goods, basket, search} = useSelector(state => state.goods);
+    const {basket, search} = useSelector(state => state.goods);
     
     const dispatch = useDispatch();
     const {request} = useHttp();
@@ -44,13 +44,8 @@ const ProductItem = () => {
     )
     const filterGoods = useSelector(filteredNav);
 
-   
-    const rr = [search]
-    const searchGoods = filterGoods.filter((item) => item.title.toLowerCase().includes([search.toLowerCase()]))
-    console.log(searchGoods);
-
-
-
+    const searchGoods = filterGoods.filter((item) => item.title.toLowerCase().includes([search]))
+ 
     const element = searchGoods.map((item) => {
 
         return(
@@ -62,9 +57,7 @@ const ProductItem = () => {
                         <img className="hover-img" src={item.img} alt="#"/>
                     </a>
                     <div className="button-head">
-                        <div className="product-action">
-                            <a title="Wishlist" href="#"><i className=" ti-heart "></i><span>Add to Wishlist</span></a> 
-                        </div>
+
                         <div className="product-action-2">
                             <div onClick={() => addBasket(item.id)} title="Add to cart" >Add to cart</div>
                         </div>

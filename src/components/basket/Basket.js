@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import BasketItem from '../basketItem/BasketItem';
 import {} from '../productItem/ProductItemSlice'
 import './basket.css';
@@ -50,10 +50,7 @@ const Basket = () => {
                                     
                                     <li className="last">You Pay<span>${totalPrice}</span></li>
                                 </ul>
-                                <div className="button5">
-                                    <a href="#" className="btn">Checkout</a>
-                                    <a href="#" className="btn">Continue shopping</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
