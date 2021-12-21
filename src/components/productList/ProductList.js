@@ -2,9 +2,11 @@ import React from 'react'
 import NavProduct from '../navProduct/NavProduct';
 import ProductItem from '../productItem/ProductItem';
 
+
 import './productList.css'
 
 const ProductList = () => {
+
     return (
         <div className="product-area section">
         <div className="container">
@@ -27,7 +29,7 @@ const ProductList = () => {
                             <div className="tab-pane fade show active" id="man" role="tabpanel">
                                 <div className="tab-single">
                                     <div className="row">
-                                        <ProductItem/>
+                                        <ProductItem/> 
                                     </div>   
                                 </div>
                             </div>

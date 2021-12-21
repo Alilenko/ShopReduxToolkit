@@ -24,9 +24,10 @@ const NavProduct = () => {
    
 
     useEffect(() => {  
-        request("http://localhost:3001/categories")
-        .then(data => dispatch(categoriesFetched(data)))
-        .catch(dispatch(categoriesError))
+    //    request("http://localhost:3001/categories")
+    //    .then(data => dispatch(categoriesFetched(data)))
+     //   .catch(dispatch(categoriesError))
+     
     }, [])
 
     const element = categories.map((item) => {

@@ -1,3 +1,7 @@
+.basket__empty{
+    text-align: center;
+   padding: 10px;
+}
 .table.shopping-summery {
 	background: #fff;
 }
@@ -696,10 +700,13 @@
         display:none !important;
     }
     .header.shop .search-bar-top {
-        display: none;
+        display: block;
     }
     .header.shop .right-bar {
-        display: none;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
     }
     .header .middle-inner{
         width:100%;
@@ -717,7 +724,7 @@
     }
     /* Header Search */
     .header.shop .search-top {
-        display:block;
+        display: none;
         position: absolute;
         right: 50px;
         top: 4px;
@@ -1409,14 +1416,14 @@
         padding: 20px 0 30px 0;
     }
     .header.shop .search-bar-top {
-        display: none;
+        display: block;
     }
     .header.shop .right-bar {
-        display: none;
+        display: block;
     }
     /* Header Search */
     .header.shop .search-top {
-        display:block;
+        display:none;
         position: absolute;
         right: 50px;
         top: 4px;
@@ -1483,7 +1490,7 @@
         border-top: 1px solid #ffffff87;
     }
     .header.shop .search-bar {
-        width: 445px;
+        width: 250px;
     }
     .header.shop .search-bar input {
         padding: 0 52px 0 20px;

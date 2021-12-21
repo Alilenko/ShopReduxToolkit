@@ -1,38 +1,32 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import {useDispatch} from 'react-redux';
-import {changeTotalPrice, changeQtty, deleteFromBasket} from '../productItem/ProductItemSlice'
+import {changeTotalPrice, changeQtty, deleteFromBasket, addToBasket, deleteQttyFromBasket} from '../productItem/ProductItemSlice'
 
 const BasketItem = ({item}) => {
-    
-    const [qtty, setQtty] = useState(1);
-    const [sum, setSum] = useState(0);
+    const {basket}  = useSelector(state => state.goods)
     const dispatch = useDispatch();
+    
+    const findGoods = basket.filter(el => el.id === item.id)
+    const findQtty = findGoods.map(item => item.qtty)
 
-    useEffect(() => {
-      setSum(sum => item.price * qtty ) 
-      dispatch(changeTotalPrice(item.price))
-      
-    }, [])
-
-    const inc = () => {
-        setQtty(qtty => qtty + 1)
-        setSum(sum => sum + item.price)
-
+    const inc = (item) => {
         dispatch(changeTotalPrice(item.price))
         dispatch(changeQtty(1))
+        dispatch(addToBasket(item.id))
     }
     const dec = (item) => {
-        if(qtty === 1){        
+        if(item.qtty == [1]){        
             onDelete(item.id)
         } else{
-        setQtty(qtty => qtty - 1)
-        setSum(sum => sum - item.price)
         dispatch(changeTotalPrice(-item.price))
         dispatch(changeQtty(-1))
+        dispatch(deleteQttyFromBasket(item.id))
     }}
     const onDelete = (id) => {
         dispatch(deleteFromBasket(id))
-        dispatch(changeTotalPrice(-(item.price*qtty)))
+        dispatch(changeTotalPrice(-(item.price*item.qtty)))
+        dispatch(changeQtty(-item.qtty))
     }
 
 
@@ -51,9 +45,9 @@ const BasketItem = ({item}) => {
                         <i className="ti-minus"></i>
                     </button>
                 </div>
-                <div className="input-number">{qtty}</div>
+                <div className="input-number">{findQtty}</div>
                 <div className="button plus">
-                    <button type="button" onClick={inc} className="btn btn-primary btn-number" >
+                    <button type="button" onClick={() => inc(item)} className="btn btn-primary btn-number" >
                         <i className="ti-plus"></i>
                     </button>
                 </div>
@@ -62,7 +56,7 @@ const BasketItem = ({item}) => {
         </td>
         <td className="total-amount" data-title="Total">
             
-            <span>${sum}</span></td>
+            <span>${item.price * findQtty}</span></td>
         <td onClick={()=>onDelete(item.id)} className="action" data-title="Remove"><div ><i className="ti-trash remove-icon"></i></div></td>
     </tr>
         )

@@ -13,7 +13,7 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
 
-      <Router>
+      <Router basename='/ShopReduxToolkit'>
           <div className="js">
         <Header/>
           <Switch>

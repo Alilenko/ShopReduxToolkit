@@ -26,9 +26,13 @@ const Basket = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {basket.map((item) => (
+                        {basket.length > 0 ? basket.map((item) => (
                             <BasketItem key={item.id} item={item}/>
-                        ))}               
+                        )) : <div className="col-auto">
+                                <div className="section-title">
+                                    <h6>Cart is empty</h6>
+                                </div>
+                           </div> }               
                     </tbody>
                 </table>
 

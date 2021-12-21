@@ -230,6 +230,16 @@
 .single-product:hover .button-head{
 	bottom:0;
 }
+@media(max-width: 767px ){
+	.single-product .button-head {
+		bottom: 0;
+	}
+}
+@media (hover: none) and (pointer: coarse){
+	.single-product .button-head {
+		bottom: 0;
+	}
+}
 .single-product .product-img .shop-list-quickview {
   position: absolute;
   top: 50%;
