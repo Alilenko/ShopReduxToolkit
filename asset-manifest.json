@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ShopReduxToolkit/static/css/main.96b432f1.chunk.css",
+    "main.js": "/ShopReduxToolkit/static/js/main.773fbd8e.chunk.js",
+    "main.js.map": "/ShopReduxToolkit/static/js/main.773fbd8e.chunk.js.map",
+    "runtime-main.js": "/ShopReduxToolkit/static/js/runtime-main.1b3f9492.js",
+    "runtime-main.js.map": "/ShopReduxToolkit/static/js/runtime-main.1b3f9492.js.map",
+    "static/js/2.8f87bfe2.chunk.js": "/ShopReduxToolkit/static/js/2.8f87bfe2.chunk.js",
+    "static/js/2.8f87bfe2.chunk.js.map": "/ShopReduxToolkit/static/js/2.8f87bfe2.chunk.js.map",
+    "index.html": "/ShopReduxToolkit/index.html",
+    "static/css/main.96b432f1.chunk.css.map": "/ShopReduxToolkit/static/css/main.96b432f1.chunk.css.map",
+    "static/js/2.8f87bfe2.chunk.js.LICENSE.txt": "/ShopReduxToolkit/static/js/2.8f87bfe2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b3f9492.js",
+    "static/js/2.8f87bfe2.chunk.js",
+    "static/css/main.96b432f1.chunk.css",
+    "static/js/main.773fbd8e.chunk.js"
+  ]
+}
